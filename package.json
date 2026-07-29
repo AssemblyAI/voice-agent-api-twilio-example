@@ -24,8 +24,6 @@
     "typescript": "^5.6.2"
   },
   "overrides": {
-    "twilio": {
-      "axios": "https://npm.aikido.io/2ce4d5aaa97571cbd3db/axios@1.15.2-aikido.2"
-    }
+    "axios": "^1.18.1"
   }
 }
