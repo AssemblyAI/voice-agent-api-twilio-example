@@ -16,6 +16,7 @@
 
 import "dotenv-flow/config";
 import express from "express";
+import helmet from "helmet";
 import ExpressWs from "express-ws";
 import * as crypto from "crypto";
 import WebSocket from "ws";
@@ -23,6 +24,7 @@ import { SYSTEM_PROMPT, DEFAULT_GREETING, TOOLS, runTool } from "./bot";
 import { TwilioMediaStreamWebsocket } from "./twilio";
 
 const { app } = ExpressWs(express());
+app.use(helmet());
 app.use(express.urlencoded({ extended: true })).use(express.json());
 
 // ----------------------------------------------------------------------------
